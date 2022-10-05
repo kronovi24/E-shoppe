@@ -1,0 +1,367 @@
+body {
+    background: rgb(218, 217, 240);
+    background: linear-gradient(90deg, rgba(218, 217, 240, 1) 0%, rgba(152, 151, 159, 1) 95%);
+    font-family: "Karla", sans-serif;
+}
+
+
+.side-navbar {
+    width: 240px;
+    height: 100%;
+    position: fixed;
+    left: -300px;
+    color: black;
+    background: rgb(218, 217, 240);
+    background: linear-gradient(90deg, rgba(218, 217, 240, 1) 0%, rgba(152, 151, 159, 1) 95%);
+    transition: 0.5s;
+    border: none;
+    z-index: 10;
+}
+
+
+.top-bar {
+    position: relative;
+    overflow: hidden;
+}
+
+.top-brand {
+    color: black;
+    font-weight: 600;
+}
+
+.top-items {
+    color: black;
+    font-weight: 600;
+    transition: 400ms;
+    border-radius: 10px;
+    padding: 10px 30px 10px;
+}
+
+.top-items:hover,
+.top-items:focus {
+    background-color: black;
+    color: #fff;
+}
+
+.top-active {
+    background-color: #000;
+    color: #fff;
+}
+
+.side-nav span, .side-nav i {
+    color: black;
+}
+
+
+.side-nav:active,
+.side-nav:focus,
+.side-nav:hover {
+    background-color: #ffffff26;
+}
+
+.my-container {
+    display: flex;
+    transition: 0.4s;
+}
+
+.active-nav {
+    left: 0;
+}
+
+.top-nav {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+/* for main section */
+.active-cont {
+    margin-left: 240px;
+
+}
+
+#menu-btn {
+    background-color: grey;
+    color: #fff;
+    font-size: 30px;
+    position: fixed;
+    z-index: 10;
+    margin: 10px;
+
+}
+
+.card {
+    border: none;
+    border-radius: 0%;
+    position: relative;
+}
+
+.card-body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+.side-nav i {
+    font-size: 30px;
+    color: black;
+}
+
+.side-nav span {
+    color: black;
+    position: relative;
+    top: -8px;
+}
+
+.nav-button {
+    border: none;
+    background: none;
+}
+
+.card li {
+    color: #100901;
+    transition: 250ms;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.card i {
+    color: #100901;
+    font-size: 20px;
+    position: relative;
+    top: 3px;
+}
+
+
+.card li:hover {
+    background-color: grey;
+    color: #fff;
+
+}
+
+.main {
+    z-index: -10;
+
+}
+
+/*next page selector */
+.next-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.next {
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 300ms;
+}
+
+.focus {
+    font-size: 25px;
+    padding: 8px;
+    background-color: gray;
+    border-radius: 5px;
+}
+
+.next:hover {
+    padding: 10px
+}
+
+.forward-right {
+    border: 2px solid black;
+    font-size: 20px;
+    border-radius: 0 20px 20px 0;
+}
+
+.forward-left {
+    border: 2px solid black;
+    font-size: 20px;
+    border-radius: 20px 0 0 20px;
+}
+
+.arrow {
+    transition: 300ms;
+}
+
+.arrow:hover {
+    padding: 10px;
+}
+
+
+/* items ccss */
+
+.item-list {
+    transition: 400ms;
+}
+
+.glow-on-hover i {
+    color: white;
+    font-size: 24px;
+}
+
+
+.item {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    margin: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+
+/* items picture */
+.item-pic {
+    max-width: 336px;
+    max-height: 336px;
+}
+
+
+.price {
+    margin: 10px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+
+/* item rating*/
+.checked {
+    color: orange;
+}
+
+.ratings {
+    margin: 0 10px 10px;
+}
+
+
+/*Modaly Body*/
+
+.login {
+    margin: 15px auto 0;
+    width: 25%;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    background-color: #FF3CAC;
+    background-image: linear-gradient(151deg, #FF3CAC 0%, #784BA0 47%, #2B86C5 100%);
+    border: none;
+    color: #fff;
+    padding: 5px;
+}
+
+.modal-b {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.modal-input {
+    border: none;
+    padding: 10px;
+    width: 70%;
+}
+
+.modal-group {
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    margin-bottom: 10px;
+}
+
+.modal-group i {
+    font-size: 30px;
+    position: relative;
+    top: 8px;
+}
+
+.label {
+    font-weight: 600;
+}
+
+.social {
+    font-size: 40px;
+}
+
+.socialIcon {
+    width: 32px;
+    transition: 200ms;
+}
+
+.socialIcon:hover {
+    width: 38px;
+}
+
+
+
+/*Glowing buttons for items*/
+.glow-on-hover {
+    padding: 10px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}

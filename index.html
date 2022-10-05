@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!--css-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--boxicon-->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!--Google fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla">
+
+    <title>E-shoppe</title>
+</head>
+
+<body>
+    <div class="side-navbar  d-flex justify-content-between flex-wrap flex-column" id="sidebar">
+        <ul class="nav flex-column w-100">
+            <a href="#" class="nav-brand h3 text-dark m-2 text-center">
+                <img src="assets/E-Shoppe-logos_black.png" alt="" class="img-fluid">
+                E-Shoppe
+            </a>
+            <li class="side-nav nav-link">
+                <i class='bx bx-home'></i>
+                <span class=" mx-2">Home</span>
+            </li>
+            <li data-bs-toggle="collapse" href="#bestseller" role="button" aria-expanded="false"
+                aria-controls="bestseller" class="side-nav nav-link">
+                <i class='bx bx-award'></i>
+                <span class="mx-2">Best Seller </span>
+            </li>
+            <li>
+                <div class="bs collapse" id="bestseller">
+                    <div class="card card-body">
+                        <ul class="p-0">
+                            <li class="nav-link">
+                                <button class="nav-button" onclick="addHeadset();">
+                                    <i class='bx bx-headphone'></i>
+                                    Headphones
+                                </button>
+                            </li>
+                            <li class="nav-link">
+                                <button class="nav-button" onclick="addKeyboards();">
+                                    <i class='bx bxs-keyboard'></i>
+                                    Keyboards
+                                </button>
+                            </li>
+                            <li class="nav-link" onclick="addMicrophone()">
+                                <i class='bx bx-microphone'></i>
+                                Mircophones
+                            </li>
+                            <li class="nav-link" onclick="addMouse();">
+                                <i class='bx bx-mouse-alt'></i>
+                                Gaming Mouse
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+
+            <li href="#" class="side-nav nav-link">
+                <i class='bx bx-cart-alt'></i>
+                <span class="mx-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">My Cart</span>
+            </li>
+
+            <li href="#" class="side-nav nav-link">
+                <i class='bx bx-message-square-dots'></i>
+                <span class="mx-2">About</span>
+            </li>
+            <li href="#" class="side-nav nav-link">
+                <i class='bx bxs-contact'></i>
+                <span class="mx-2">Contact</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class=" my-container align-content-center top-bar">
+        <a class="btn border-0" id="menu-btn">
+            <i class="bx bx-menu"></i>
+        </a>
+    </div>
+
+    <!-- Carousel -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/headphones/carousel/1.jpg" alt="Los Angeles" class="d-block"
+                    style="width:100%; height: auto; max-height: 60vh;">
+                <div class="carousel-caption">
+                    <h3>Best Choice</h3>
+                    <p>Upgrade your setup now!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="assets/headphones/carousel/2.jpg" alt="Chicago" class="d-block"
+                    style="width:100%; height: auto; max-height: 60vh;">
+                <div class="carousel-caption">
+                    <h3>High Quality</h3>
+                    <p>Accessories for you</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="assets/headphones/carousel/3.jpg" alt="New York" class="d-block"
+                    style="width:100%; height: auto; max-height: 60vh;">
+                <div class="carousel-caption">
+                    <h3>Level up</h3>
+                    <p>Upgrade you workspace!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+
+    <!--Navbbar-->
+    <nav class="top-nav navbar navbar-expand-lg navbar-light bg-light mb-3">
+        <div class="container-fluid mx-3">
+            <a class="top-brand navbar-brand" href="#">
+                E-Shoppe</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class=" navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class=" nav-item">
+                        <a class="top-items nav-link" aria-current="page" id="headphone">Headphones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="top-items nav-link" id="keyboard">Keyboards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="top-items nav-link" id="microphone">Microphone</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="top-items nav-link" id="mouse">Gaming Mouse</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-dark" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!--items-->
+    <div class="main container" id="item-section">
+        <h1>Best Sellers</h1>
+        <div class="item-list row justify-content-center">
+
+            <!--item content will be dislayed via javascript-->>
+        </div>
+
+        <div class="next-container">
+            <div class="next-page">
+                <button type="button" class="arrow forward-left"><i class='bx bxs-chevron-left'></i></button>
+                <button type="button" class="focus">1</button>
+                <button type="button" class="next">2</button>
+                <button type="button" class="next">3</button>
+                <button type="button" class="next">4</button>
+                <button type="button" class="next">5</button>
+                <button type="button" class="next">+</button>
+                <button type="button" class="arrow forward-right"><i class='bx bxs-chevron-right'></i></button>
+            </div>
+        </div>
+
+        <!--Modal-->
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Login</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-b">
+
+                            <span class="label">Username</span>
+                            <div class="modal-group">
+                                <i class='bx bx-user'></i>
+                                <input type="text" placeholder="Type your Username" class="modal-input">
+                            </div>
+
+                            <span class="label">Password</span>
+                            <div class="modal-group">
+                                <i class='bx bx-lock-alt'></i>
+                                <input type="text" placeholder="Type your Password" class="modal-input">
+                            </div>
+
+                            <button class="login">Login</button>
+                            <button class="login">Sign Up</button>
+                            <p style="text-align: center; margin-top:10px; margin-bottom: 5px;">Or Sign in using</p>
+                            <div style="text-align:center;" class="social">
+                                <img src="assets/logos/facebook.png" alt="" class="socialIcon">
+                                <img src="assets/logos/gmail.png" alt="" class="socialIcon">
+                                <img src="assets/logos/instagram.png" alt="" class="socialIcon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top justify-content-between">
+            <div class="col mb-3">
+                <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+                    <img src="assets/E-Shoppe-logos_black.png" alt="" style="width: 200px;">
+                </a>
+                <p class="text-muted">Made by Kurtz © 2022</p>
+            </div>
+
+            <div class="col mb-3">
+
+            </div>
+
+            <div class="col mb-3">
+
+            </div>
+
+            <div class="col mb-3">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact us</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!--scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
